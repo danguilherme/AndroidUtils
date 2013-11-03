@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.UnknownHostException;
 
+import org.apache.http.HttpException;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
@@ -32,7 +33,7 @@ public class Service {
 	}
 
 	protected String doGet(String url) throws NoInternetConnectionException,
-			LazyInternetConnectionException {
+			LazyInternetConnectionException, HttpException {
 
 		HttpGet request = null;
 		try {
@@ -46,7 +47,7 @@ public class Service {
 
 	protected String doGet(HttpGet request)
 			throws NoInternetConnectionException,
-			LazyInternetConnectionException {
+			LazyInternetConnectionException, HttpException {
 
 		this.beforeRequest();
 
@@ -72,6 +73,14 @@ public class Service {
 			return null;
 
 		Log.i(TAG, "Response statusline: " + response.getStatusLine());
+		int statusCode = response.getStatusLine().getStatusCode();
+		if (statusCode == 204)
+			return null;
+
+		if (statusCode < 200 && statusCode > 299)
+			throw new HttpException(response.getStatusLine().getStatusCode()
+					+ " - " + response.getStatusLine().getReasonPhrase());
+
 		InputStream data;
 		StringBuilder responseBuilder = new StringBuilder();
 		try {
@@ -84,7 +93,7 @@ public class Service {
 			while ((responseLine = bufferedReader.readLine()) != null) {
 				responseBuilder.append(responseLine);
 			}
-			Log.i(TAG, "Response: " + responseBuilder.toString());
+			Log.i(TAG, "Response text: " + responseBuilder.toString());
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
