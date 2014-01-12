@@ -9,28 +9,176 @@ package com.ventura.androidutils;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int groupTitle=0x7f010000;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int keyDelimiter=0x7f010001;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int keyText=0x7f010002;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int valueText=0x7f010003;
+    }
+    public static final class color {
+        public static int black=0x7f040001;
+        public static int blue=0x7f040004;
+        public static int dark_blue=0x7f040006;
+        public static int green=0x7f040003;
+        public static int red=0x7f040002;
+        public static int transparent=0x7f040000;
+        public static int white=0x7f040005;
     }
     public static final class drawable {
-        public static int ic_launcher=0x7f020000;
+        public static int button_list_first=0x7f020000;
+        public static int button_list_first_hover=0x7f020001;
+        public static int button_list_first_selector=0x7f020002;
+        public static int button_list_last=0x7f020003;
+        public static int button_list_last_hover=0x7f020004;
+        public static int button_list_last_selector=0x7f020005;
+        public static int button_list_middle=0x7f020006;
+        public static int button_list_middle_hover=0x7f020007;
+        public static int button_list_middle_selector=0x7f020008;
+        public static int button_list_single=0x7f020009;
+        public static int button_list_single_hover=0x7f02000a;
+        public static int button_list_single_selector=0x7f02000b;
+        public static int ic_launcher=0x7f02000c;
+        public static int no_image=0x7f02000d;
+        public static int rounded_borders=0x7f02000e;
+    }
+    public static final class id {
+        public static int key=0x7f070000;
+        public static int value=0x7f070001;
+    }
+    public static final class layout {
+        public static int button_group=0x7f030000;
+        public static int button_group_item=0x7f030001;
+        public static int key_value_panel=0x7f030002;
     }
     public static final class string {
-        public static int app_name=0x7f030000;
+        public static int app_name=0x7f050000;
     }
     public static final class style {
-        /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
+        public static int AppTheme=0x7f060000;
+        /**  ALL NEW 
+ android:Theme.Light 
          */
-        public static int AppBaseTheme=0x7f040000;
-        /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
-         */
-        public static int AppTheme=0x7f040001;
+        public static int text=0x7f060001;
+        public static int text_medium=0x7f060006;
+        public static int text_medium_bold=0x7f060007;
+        public static int text_micro=0x7f060002;
+        public static int text_micro_bold=0x7f060003;
+        public static int text_small=0x7f060004;
+        public static int text_small_bold=0x7f060005;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ButtonGroup.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ButtonGroup_groupTitle com.ventura.androidutils:groupTitle}</code></td><td></td></tr>
+           </table>
+           @see #ButtonGroup_groupTitle
+         */
+        public static final int[] ButtonGroup = {
+            0x7f010000
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.ventura.androidutils.R.attr#groupTitle}
+          attribute's value can be found in the {@link #ButtonGroup} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ventura.androidutils:groupTitle
+        */
+        public static final int ButtonGroup_groupTitle = 0;
+        /** Attributes that can be used with a KeyValuePanel.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #KeyValuePanel_keyDelimiter com.ventura.androidutils:keyDelimiter}</code></td><td></td></tr>
+           <tr><td><code>{@link #KeyValuePanel_keyText com.ventura.androidutils:keyText}</code></td><td></td></tr>
+           <tr><td><code>{@link #KeyValuePanel_valueText com.ventura.androidutils:valueText}</code></td><td></td></tr>
+           </table>
+           @see #KeyValuePanel_keyDelimiter
+           @see #KeyValuePanel_keyText
+           @see #KeyValuePanel_valueText
+         */
+        public static final int[] KeyValuePanel = {
+            0x7f010001, 0x7f010002, 0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.ventura.androidutils.R.attr#keyDelimiter}
+          attribute's value can be found in the {@link #KeyValuePanel} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ventura.androidutils:keyDelimiter
+        */
+        public static final int KeyValuePanel_keyDelimiter = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.ventura.androidutils.R.attr#keyText}
+          attribute's value can be found in the {@link #KeyValuePanel} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ventura.androidutils:keyText
+        */
+        public static final int KeyValuePanel_keyText = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.ventura.androidutils.R.attr#valueText}
+          attribute's value can be found in the {@link #KeyValuePanel} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ventura.androidutils:valueText
+        */
+        public static final int KeyValuePanel_valueText = 2;
+    };
 }

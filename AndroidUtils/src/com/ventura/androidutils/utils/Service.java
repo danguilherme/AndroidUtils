@@ -62,7 +62,7 @@ public class Service {
 		} catch (ClientProtocolException e) {
 			e.printStackTrace();
 		} catch (UnknownHostException e) {
-			throw new LazyInternetConnectionException();
+			throw new LazyInternetConnectionException(e);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (Exception e) {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ButtonGroup">
+        <attr name="groupTitle" format="string" />
+    </declare-styleable>
+	
+    <declare-styleable name="KeyValuePanel">
+        <attr name="keyDelimiter" format="string" />
+        <attr name="keyText" format="string" />
+        <attr name="valueText" format="string" />
+    </declare-styleable>
+
+</resources>
