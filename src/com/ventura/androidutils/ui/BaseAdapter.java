@@ -17,6 +17,7 @@ public abstract class BaseAdapter<T> extends android.widget.BaseAdapter {
 	public BaseAdapter(Context context, List<T> data) {
 		this.context = context;
 		this.data = data;
+		notifyDataSetChanged();
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		imageLoader = new ImageLoader(context.getApplicationContext());
@@ -54,6 +55,23 @@ public abstract class BaseAdapter<T> extends android.widget.BaseAdapter {
 	}
 
 	/**
+	 * Uses {@link #getId} to search for the specified ID and then returns the
+	 * found item's id. Returns -1 if not found.
+	 * 
+	 * @param position
+	 * @return
+	 */
+	public int getItemPosition(String id) {
+		for (int i = 0; i < data.size(); i++) {
+			String itemId = getId(i);
+			if (id.equals(itemId))
+				return i;
+		}
+		
+		return -1;
+	}
+
+	/**
 	 * Gets the item id by its position
 	 * 
 	 * @param position
@@ -69,11 +87,6 @@ public abstract class BaseAdapter<T> extends android.widget.BaseAdapter {
 	public void add(T item) {
 		data.add(item);
 		notifyDataSetChanged();
-	}
-
-	public void addAll(Collection<T> items) {
-		for (T item : items)
-			add(item);
 	}
 
 	public void removeAll() {

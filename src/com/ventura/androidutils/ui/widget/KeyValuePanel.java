@@ -19,6 +19,7 @@ public class KeyValuePanel extends LinearLayout {
 
 	public KeyValuePanel(Context context, AttributeSet attrs) {
 		super(context, attrs);
+        inflate(getContext(), R.layout.key_value_panel, this);
 
 		TypedArray typedArray = context.obtainStyledAttributes(attrs,
 				R.styleable.KeyValuePanel);
@@ -30,18 +31,21 @@ public class KeyValuePanel extends LinearLayout {
 		}
 		keyText = typedArray.getString(R.styleable.KeyValuePanel_keyText);
 		valueText = typedArray.getString(R.styleable.KeyValuePanel_valueText);
-		
+
 		typedArray.recycle();
+		this.initComponent(keyText, valueText, keyDelimiter);
 	}
 
 	public KeyValuePanel(Context context, String key, String value) {
 		super(context);
+        inflate(getContext(), R.layout.key_value_panel, this);
 		this.initComponent(key, value, DEFAULT_KEY_DELIMITER);
 	}
 
 	public KeyValuePanel(Context context, String key, String value,
 			String keyDelimiter) {
 		super(context);
+        inflate(getContext(), R.layout.key_value_panel, this);
 		this.initComponent(key, value, keyDelimiter);
 	}
 
